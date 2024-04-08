@@ -1,0 +1,135 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 1,
+        "Cityname": "Vịnh Hạ Long",
+        "Cityimage": "vinh_ha_long.webp",
+        "description": "Vịnh Hạ Long chắc chắn là danh lam thắng cảnh Việt Nam nổi tiếng nhất và cũng được nhiều du khách biết đến nhất. Nơi đây sở hữu nhiều hòn đảo đá vôi, phiến thạch với kích thước và hình dáng cực kỳ độc đáo. Đâu phải tự nhiên mà vịnh Hạ Long được UNESCO công nhận là một trong 7 kỳ quan thiên nhiên đẹp nhất thế giới đâu. Đến đây thì ngoài việc tham quan Vịnh Hạ Long, bạn còn có thể ghé thăm nhiều địa điểm nổi tiếng khác như: vịnh Lan Hạ, Đảo Tuần Châu, Bãi Cháy, Đảo Quan Lạn, Đảo Ti Tốp, Khu di tích Yên tử, chùa Cái Bầu,..."
+      },
+      "geometry": {
+        "coordinates": [107.06926672883736, 20.898252149797656],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 2,
+        "Cityname": "Đảo Phú Quốc",
+        "Cityimage": "phu_quoc.webp",
+        "description": "Danh lam thắng cảnh Việt Nam tiếp theo sẽ là Phú Quốc - hòn đảo du lịch đẹp nhất Việt Nam hiện nay. Đảo Phú Quốc tọa lạc tại vịnh Thái Lan và có diện tích 574km2, nơi đây nổi tiếng với nhiều bãi biển tuyệt đẹp, bãi cát trắng mịn, không khí mát mẻ quanh năm nên thu hút được rất nhiều khách du lịch trong và ngoài nước. Ngoài các cảnh quan tự nhiên thì Phú Quốc còn sở hữu nhiều địa điểm du lịch nổi tiếng như Nhà tù Phú Quốc, Bảo tàng Cội Nguồn, Mũi Dinh Cậu, Suối Đá Ngọn,..."
+      },
+      "geometry": {
+        "coordinates": [103.99075317336928, 10.217261794325765],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 3,
+        "Cityname": "Cố Đô Huế",
+        "Cityimage": "co_do_hue.webp",
+        "description": "Quần thể di tích cố đô Huế là nơi đóng đô của triều đại nhà Nguyễn của Việt Nam trong suốt 143 năm kể từ năm 1802. Nơi đây được UNESCO công nhận là Di tích văn hoá thế giới. Dù trải qua bao năm tháng hay chiến tranh khốc liệt, đến nay Cố đô Huế vẫn giữa được những nét kiến trúc từ thuở ban đầu. Cố đô Huế hiện có 16 hạng mục công trình, trong đó nổi bật nhất phải kể đến Cung điện trong Tử Cấm Thành, Kinh Thành, Hoàng Thành, đàn Nam Giao, lăng tẩm, Võ Miếu, Văn Miếu, Hồ Quyền và Chùa Thiên Mụ. Với những ai muốn tìm hiểu về thời kỳ phong kiến của Việt Nam thì nhớ đừng bỏ qua cái tên Cố đô Huế nha."
+      },
+      "geometry": {
+        "coordinates": [107.5944220000037, 16.466063743841573],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 4,
+        "Cityname": "Phố cổ Hội An",
+        "Cityimage": "pho_co_hoi_an.webp",
+        "description": "Nhắc đến danh lam thắng cảnh Việt Nam thì cái tên Phố cổ Hội An chắc hẳn sẽ hiện lên trong tâm trí nhiều người. Hội An trước đây là một thương cảng buôn bán quốc tế cực kỳ sầm uất, mặc dù đã qua thời vàng son nhưng đến nay nơi đây vẫn lưu giữ được nhiều nét kiến trúc, văn hóa lẫn hoạt động vô cùng đặc sắc. Ghé Hội An, bạn có thể tham quan nhiều kiến trúc cổ xưa như chùa Cầu, chùa Ông, Hội quán Phúc Kiến, miếu Quan Công,... và tham gia trải nghiệm nhiều lễ hội, hoạt động văn hóa nghệ thuật khác."
+      },
+      "geometry": {
+        "coordinates": [108.3273708663022, 15.881048187339644],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 5,
+        "Cityname": "Quần thể danh thắng Tràng An",
+        "Cityimage": "quan_the_danh_thang_trang_an.webp",
+        "description": "Lại thêm một danh lam thắng cảnh Việt Nam được UNESCO công nhận là Di sản thế giới, ấy chính là Quần thể danh thắng Tràng An - Ninh Bình. Tràng An nổi tiếng với các ngọn đá vôi cao to hùng vĩ, cảnh quan thiên nhiên hoang sơ, hệ thống hang động đa dạng cùng nhiều thung lũng bạt ngàn. Nơi đây thậm chí còn được miêu tả như là một “vịnh Hạ Long trên cạn”. Nếu có dịp du lịch Tràng An thì bạn có thể kết hợp tham quan cả cố đô Hoa Lư với lịch sử hơn 1000 năm nữa nhé."
+      },
+      "geometry": {
+        "coordinates": [105.91677877116518, 20.254540967295625],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 6,
+        "Cityname": "Thánh địa Mỹ Sơn",
+        "Cityimage": "thanh_dia_my_son.webp",
+        "description": "Thánh địa Mỹ Sơn xứng đáng được góp mặt trong danh sách những danh lam thắng cảnh Việt Nam đẹp nhất. Tọa lạc tại tỉnh Quảng Nam, thánh địa Mỹ Sơn là quần thể kiến trúc với hơn 70 đền đài Chăm Pa cực kỳ độc đáo, nơi đây được chính thức phát hiện vào năm 1885 và được UNESCO công nhận là Di sản văn hoá thế giới vào năm 1999. Dù bị chiến tranh lẫn thời gian tàn phá nặng nề nhưng đến nay các công trình của người Chăm Pa tại Mỹ Sơn hầu như vẫn còn nguyên vẹn và rất xứng đáng để mọi du khách ghé thăm một lần."
+      },
+      "geometry": {
+        "coordinates": [108.12017172883782, 15.765583788781953],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 7,
+        "Cityname": "Đỉnh Fansipan",
+        "Cityimage": "dinh_Fansipan.webp",
+        "description": "Fansipan là đỉnh núi cao nhất Đông Dương hiện nay với độ cao 3147,3 m và được mệnh danh là “nóc nhà của Đông Dương”. Đỉnh Fansipan xứng đáng lọt TOP danh lam thắng cảnh Việt Nam cho bạn chinh phục, đặc biệt là đối với những ai yêu thích leo núi và khám phá thiên nhiên. Đứng từ đỉnh Fansipan nhìn xuống, bạn sẽ thấy khung cảnh núi non tuyệt đẹp xen giữa các đám mây bồng bềnh cực kỳ thích mắt."
+      },
+      "geometry": {
+        "coordinates": [103.84304845767082, 22.336435733418384],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 8,
+        "Cityname": "Vườn Quốc gia Tràm Chim",
+        "Cityimage": "vuon_quoc_gia_tram_chim.webp",
+        "description": "Nói đến các danh lam thắng cảnh Việt Nam tại khu vực miền Tây Nam Bộ thì chắc chắn phải có Vườn Quốc gia Tràm Chim. Đây là khu du lịch sinh thái cực kỳ nổi tiếng với du khách trong và lẫn ngoài nước. Hệ sinh thái thì cực kỳ đa dạng và phong phú, tại đây còn có nhiều loại chim cực kỳ quý hiếm, đặc biệt nhất chắc chắn là Sếu đầu đỏ. Vườn Quốc gia Tràm Chim có không gian thoáng đãng, mát mẻ nên rất phù hợp cho những ai thích sự thanh bình, mát mẻ."
+      },
+      "geometry": {
+        "coordinates": [105.55631872883731, 10.684585728585546],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 9,
+        "Cityname": "Côn Đảo",
+        "Cityimage": "con_dao.webp",
+        "description": "Nhắc đến Côn Đảo thì chắc hẳn ai cũng biết rõ rồi phải không nào, đây là một quần đảo thuộc tỉnh Bà Rịa - Vũng Tàu nằm cách đất liền khoảng 40 hải lý. Côn Đảo hiện chưa bị tác động nhiều bởi bàn tay con người nên vẫn giữ được nét hoang sơ, đến đây bạn có thể thoải mái tắm biển, thưởng thức hải sản hay tham quan nhiều địa danh du lịch nổi tiếng như vịnh Đầm Tre, bãi Đầm Trâu, Mũi Tàu Bể, nhà tù Côn Đảo,... Với không gian xinh đẹp, Côn Đảo xứng đáng là một trong những danh lam thắng cảnh Việt Nam cho bạn ghé thăm."
+      },
+      "geometry": {
+        "coordinates": [106.60683486932089, 8.683759161193635],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 10,
+        "Cityname": "Vườn quốc gia Phong Nha - Kẻ Bàng",
+        "Cityimage": "phong_nha_ke_bang.webp",
+        "description": "Vườn Quốc gia Phong Nha - Kẻ Bàng gây ấn tượng với tổng diện tích lên đến 200.000 ha cùng hệ thống 300 hang động lớn nhỏ nằm bên trong các ngọn núi đá vôi. Những hang động nổi tiếng tại đây phải kể đến như Động Phong Nha, Sông Chày Hang Tối, Hang Tám Cô, Động Thiên Đường, Thác Gió - Vườn Thực Vật,... Đặt chân vào các hang động nơi đây, bạn sẽ được chứng kiến hệ thống thạch nhũ tuyệt đẹp cùng hệ sinh thái cực kỳ đa dạng. Khí hậu tại Phong Nha - Kẻ Bàng quanh năm mát mẻ nên rất lý tưởng để du lịch."
+      },
+      "geometry": {
+        "coordinates": [106.28303672883555, 17.581781796802446],
+        "type": "Point"
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/ol.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-1">
+        <div class="column-navigation">
+          <a title="Home" id="Home" class="active"
+            ><i class="fas fa-home" id="Home"></i
+          ></a>
+          <a title="Vịnh Hạ Long" id="Vịnh Hạ Long"
+            ><i class="far fa-circle" id="Vịnh Hạ Long"></i
+          ></a>
+          <a title="Đảo Phú Quốc" id="Đảo Phú Quốc"
+            ><i class="far fa-circle" id="Đảo Phú Quốc"></i
+          ></a>
+          <a title="Cố Đô Huế" id="Cố Đô Huế"
+            ><i class="far fa-circle" id="Cố Đô Huế"></i
+          ></a>
+          <a title="Phố cổ Hội An" id="Phố cổ Hội An"
+            ><i class="far fa-circle" id="Phố cổ Hội An"></i
+          ></a>
+          <a
+            title="Quần thể danh thắng Tràng An"
+            id="Quần thể danh thắng Tràng An"
+            ><i class="far fa-circle" id="Quần thể danh thắng Tràng An"></i
+          ></a>
+          <a title="Thánh địa Mỹ Sơn" id="Thánh địa Mỹ Sơn"
+            ><i class="far fa-circle" id="Thánh địa Mỹ Sơn"></i
+          ></a>
+          <a title="Đỉnh Fansipan" id="Đỉnh Fansipan"
+            ><i class="far fa-circle" id="Đỉnh Fansipan"></i
+          ></a>
+          <a title="Vườn Quốc gia Tràm Chim" id="Vườn Quốc gia Tràm Chim"
+            ><i class="far fa-circle" id="Vườn Quốc gia Tràm Chim"></i
+          ></a>
+          <a title="Côn Đảo" id="Côn Đảo"
+            ><i class="far fa-circle" id="Côn Đảo"></i
+          ></a>
+          <a
+            title="Vườn quốc gia Phong Nha - Kẻ Bàng"
+            id="Vườn quốc gia Phong Nha - Kẻ Bàng"
+            ><i class="far fa-circle" id="Vườn quốc gia Phong Nha - Kẻ Bàng"></i
+          ></a>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="column-map" id="openlayers-map"></div>
+      </div>
+      <div class="grid-3">
+        <div class="column-menu" id="menu-information">
+          <p id="cityname">Welcome to Viet Nam Tourist Attractions</p>
+          <p id="place_coordinates"></p>
+          <p id="total_click_count"></p>
+          <img
+            id="cityimage"
+            src="/City_images/Vietnam-travel-24_1653706931.jpg"
+            alt="VietNamFlag"
+          />
+          <p id="placedescription"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popover-information">
+      <p id="popover-text"></p>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/5f23c667b4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/dist/ol.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
