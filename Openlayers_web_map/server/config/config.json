@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "270803",
     "database": "cloud_computing_final_project",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
