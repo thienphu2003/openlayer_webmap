@@ -153,6 +153,7 @@ function init() {
       const data = {
         ID: feature.get("ID"),
       };
+      console.log(data);
       const response = await fetch("http://localhost:3002", {
         method: "POST",
         headers: {

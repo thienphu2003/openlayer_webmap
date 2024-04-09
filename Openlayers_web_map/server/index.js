@@ -37,6 +37,6 @@ app.post("/", async function (req, res) {
   res.json({ count: result.total_click, time: result.last_time_click });
 });
 
-app.get("/:ID", async function (req, res) {
-  await getData(req.params);
-});
+// app.get("/:ID", async function (req, res) {
+//   await getData(req.params);
+// });
