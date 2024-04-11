@@ -31,13 +31,15 @@ This project utilizes the OpenLayers library to create interactive maps on the w
 
 This project uses Sequelize for database migrations. Follow the steps below to set up the database:
 
+In the config file for database in the config/config.json you will have to refill in the information if you choose to create you own database
+
 1. **Create Database**: Execute the following command to create the database:
    ```bash
-   sequelize db:create
+   sequelize db:create or npx sequelize db:create
    ```
 2. **Run Migrations**: Run the migrations to create the necessary tables:
    ```bash
-   sequelize db:migrate
+   sequelize db:migrate or npx sequelize db:migrate
    ```
 
 For more detailed instructions on using Sequelize and Sequelize CLI, refer to the [Sequelize documentation page](https://sequelize.org) for general information about Sequelize or [Sequelize CLI specification](https://sequelize.org/docs/v7/cli/) for specific CLI details.
