@@ -19,9 +19,8 @@
     "express": "^4.19.2",
     "nodemon": "^3.1.0",
     "ol": "^9.1.0",
-    "pg": "^8.11.5",
-    "pg-hstore": "^2.3.4",
-    "sequelize": "^6.29.0"
+    "sequelize": "^6.29.0",
+    "pg": "^8.11.3"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.5",

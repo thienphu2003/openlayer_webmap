@@ -15,9 +15,15 @@
   },
   "production": {
     "username": "postgres",
-    "password": "thienphu2003",
-    "database": "cloudcomputing",
-    "host": "database-test1.cbcu6uyei05h.ap-southeast-2.rds.amazonaws.com",
-    "dialect": "postgres"
+    "password": "27082003",
+    "database": "initial_db",
+    "host": "demo-rds-database.cbcu6uyei05h.ap-southeast-2.rds.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
