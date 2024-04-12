@@ -154,7 +154,7 @@ function init() {
         ID: feature.get("ID"),
       };
       console.log(data);
-      const response = await fetch("http://3.27.208.125:80", {
+      const response = await fetch("http://13.210.183.195:80", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
