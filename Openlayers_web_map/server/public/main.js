@@ -2,7 +2,7 @@ window.onload = init;
 
 const totalCountClick = 0;
 
-const SERVER_HOST = "http://18.209.212.180:3002";
+const SERVER_HOST = "http://18.209.212.180";
 
 function init() {
   const vietnamCenterCoordinate = [107.8167, 16.4764];
