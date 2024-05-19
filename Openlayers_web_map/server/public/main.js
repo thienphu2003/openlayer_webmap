@@ -2,6 +2,8 @@ window.onload = init;
 
 const totalCountClick = 0;
 
+const SERVER_HOST = "http://localhost:3002";
+
 function init() {
   const vietnamCenterCoordinate = [107.8167, 16.4764];
   const map = new ol.Map({
@@ -154,7 +156,7 @@ function init() {
         ID: feature.get("ID"),
       };
       console.log(data);
-      const response = await fetch("http://13.210.183.195:80", {
+      const response = await fetch(SERVER_HOST, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
