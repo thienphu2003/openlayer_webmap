@@ -3,7 +3,7 @@ window.onload = init;
 const totalCountClick = 0;
 
 const SERVER_HOST =
-  "http://KietHuyPhuGroupELB-1333903216.us-east-1.elb.amazonaws.com";
+  "http://kiethuyphugroupelb-1333903216.us-east-1.elb.amazonaws.com";
 
 function init() {
   const vietnamCenterCoordinate = [107.8167, 16.4764];
