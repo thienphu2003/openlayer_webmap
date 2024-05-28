@@ -5,6 +5,9 @@ const totalCountClick = 0;
 const SERVER_HOST =
   "http://kiethuyphugroupelb-1333903216.us-east-1.elb.amazonaws.com";
 
+const IMAGE_PRODUCTION_URL =
+  "https://huyphukietbucket.s3.amazonaws.com/City_images/";
+
 function init() {
   const vietnamCenterCoordinate = [107.8167, 16.4764];
   const map = new ol.Map({
@@ -131,7 +134,10 @@ function init() {
     if (clickedAnchorElement.id === "Home") {
       mapView.animate({ center: vietnamCenterCoordinate }, { zoom: 4 });
       cityNameElement.innerHTML = "Welcome to VietNam Tourist Attractions";
-      cityImageElement.setAttribute("src", "/Vietnam-travel-24_1653706931.jpg");
+      cityImageElement.setAttribute(
+        "src",
+        IMAGE_PRODUCTION_URL + "Vietnam-travel-24_1653706931.jpg"
+      );
       cityDescription.innerHTML = "";
       totalClickCount.innerHTML = "";
     }
@@ -150,7 +156,7 @@ function init() {
       let featureImage = feature.get("Cityimage");
       let featureDescription = feature.get("description");
       cityNameElement.innerHTML = "Name of the place: " + featureName;
-      cityImageElement.setAttribute("src", featureImage);
+      cityImageElement.setAttribute("src", IMAGE_PRODUCTION_URL + featureImage);
       cityDescription.innerHTML = featureDescription;
       totalClickCount.innerHTML = totalCountClick;
       const data = {
