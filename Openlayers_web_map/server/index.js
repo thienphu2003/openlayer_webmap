@@ -10,7 +10,7 @@ const app = express();
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ extended: false, limit: "50mb" }));
 // app.use(express.static(__dirname, "../libs/v9.1.0-package/ol.css"));
-app.set("port", 80);
+app.set("port", 3002);
 app.use(cors());
 
 app.use(express.static(path.join(__dirname, "public")));
