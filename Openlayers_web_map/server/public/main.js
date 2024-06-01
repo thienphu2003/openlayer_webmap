@@ -1,6 +1,6 @@
 window.onload = init;
 
-const totalCountClick = 0;
+let totalCountClick = 0;
 
 const SERVER_HOST = "http://ec2-3-233-122-181.compute-1.amazonaws.com";
 
@@ -8,6 +8,7 @@ const IMAGE_PRODUCTION_URL =
   "https://kietphuhuybucket.s3.amazonaws.com/City_images/";
 
 function init() {
+  const [click, setClick] = useState(0);
   const vietnamCenterCoordinate = [107.8167, 16.4764];
   const map = new ol.Map({
     view: new ol.View({
@@ -157,11 +158,10 @@ function init() {
       cityNameElement.innerHTML = "Name of the place: " + featureName;
       cityImageElement.setAttribute("src", IMAGE_PRODUCTION_URL + featureImage);
       cityDescription.innerHTML = featureDescription;
-      totalClickCount.innerHTML = totalCountClick;
+      totalClickCount.innerHTML = totalCountClick++;
       const data = {
         ID: feature.get("ID"),
       };
-      console.log(data);
       const response = await fetch(SERVER_HOST, {
         method: "POST",
         headers: {
@@ -186,7 +186,7 @@ function init() {
 
       totalClickCount.innerHTML =
         "Total Click Count " +
-        result?.count +
+        totalClickCount +
         " and last time click  " +
         formattedDate;
     }
