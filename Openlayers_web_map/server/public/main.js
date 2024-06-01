@@ -8,7 +8,6 @@ const IMAGE_PRODUCTION_URL =
   "https://kietphuhuybucket.s3.amazonaws.com/City_images/";
 
 function init() {
-  const [click, setClick] = useState(0);
   const vietnamCenterCoordinate = [107.8167, 16.4764];
   const map = new ol.Map({
     view: new ol.View({
@@ -184,7 +183,6 @@ function init() {
       const formattedDate = formatter.format(date);
       console.log(formattedDate);
       totalClickCount = totalClickCount + 1;
-
       totalClickCount.innerHTML =
         "Total Click Count " +
         totalClickCount +
