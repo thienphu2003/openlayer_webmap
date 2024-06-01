@@ -7,13 +7,13 @@ const SERVER_HOST = "http://ec2-3-233-122-181.compute-1.amazonaws.com";
 const IMAGE_PRODUCTION_URL =
   "https://kietphuhuybucket.s3.amazonaws.com/City_images/";
 
-async function init() {
-  await fetch(SERVER_HOST + "/reloadData", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
+function init() {
+  // await fetch(SERVER_HOST + "/reloadData", {
+  //   method: "GET",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  // });
   const vietnamCenterCoordinate = [107.8167, 16.4764];
   const map = new ol.Map({
     view: new ol.View({
