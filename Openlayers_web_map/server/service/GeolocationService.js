@@ -4,14 +4,14 @@ const fs = require("fs");
 const City = require("../model/City");
 const path = require("path");
 const axios = require("axios");
-const { sequelize } = require("../models");
+const { Sequelize } = require("../models");
 
 const geojsonFilePath = `${path.join(__dirname, "../data/map.geojson")}`;
 const geojson = JSON.parse(fs.readFileSync(geojsonFilePath, "utf8"));
 
 async function saveGeoJSONToDatabase() {
   try {
-    const transaction = await sequelize.transaction();
+    const transaction = await Sequelize.Transaction();
     for (const feature of geojson.features) {
       const { ID, Cityname, Cityimage, description } = feature.properties;
       const coordinates = feature.geometry.coordinates;
