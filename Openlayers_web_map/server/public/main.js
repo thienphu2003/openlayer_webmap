@@ -2,7 +2,7 @@ window.onload = init;
 
 const totalCountClick = 0;
 
-const SERVER_HOST = "http://ec2-3-233-122-181.compute-1.amazonaws.com:3002";
+const SERVER_HOST = "http://ec2-3-233-122-181.compute-1.amazonaws.com";
 
 const IMAGE_PRODUCTION_URL =
   "https://kietphuhuybucket.s3.amazonaws.com/City_images/";
