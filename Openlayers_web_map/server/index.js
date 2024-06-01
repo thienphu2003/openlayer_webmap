@@ -28,7 +28,6 @@ app.listen(app.get("port"), function (err) {
   }
 });
 app.get("/", function (req, res) {
-  saveGeoJSONToDatabase();
   res.render("index");
 });
 
@@ -37,6 +36,6 @@ app.post("/", async function (req, res) {
   res.json({ count: result.total_click, time: result.last_time_click });
 });
 
-// app.get("/:ID", async function (req, res) {
-//   await getData(req.params);
-// });
+app.get("/reloadData", async function (req, res) {
+  await saveGeoJSONToDatabase();
+});
