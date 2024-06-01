@@ -17,7 +17,7 @@
     "username": "postgres",
     "password": "kiethuyphu",
     "database": "initial_db",
-    "host": "kiethuyphu-database.c2pbcgectxpd.us-east-1.rds.amazonaws.com",
+    "host": "kiethuyphudatabase.c45uobvjoeqq.us-east-1.rds.amazonaws.com",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {
