@@ -30,7 +30,7 @@ async function saveGeoJSONToDatabase() {
         },
       });
       if (exist) {
-        await exist.update({ total_click_count: 0 });
+        await exist.update({ total_click_count: 1 });
       }
     }
     console.log("GeoJSON data has been saved to the database.");
