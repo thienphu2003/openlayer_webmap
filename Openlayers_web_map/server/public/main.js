@@ -158,7 +158,7 @@ function init() {
       cityNameElement.innerHTML = "Name of the place: " + featureName;
       cityImageElement.setAttribute("src", IMAGE_PRODUCTION_URL + featureImage);
       cityDescription.innerHTML = featureDescription;
-      totalClickCount.innerHTML = totalCountClick++;
+      totalClickCount.innerHTML = totalCountClick;
       const data = {
         ID: feature.get("ID"),
       };
@@ -183,6 +183,7 @@ function init() {
       });
       const formattedDate = formatter.format(date);
       console.log(formattedDate);
+      totalClickCount = totalClickCount + 1;
 
       totalClickCount.innerHTML =
         "Total Click Count " +
