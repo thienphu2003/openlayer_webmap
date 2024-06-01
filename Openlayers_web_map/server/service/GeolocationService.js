@@ -11,36 +11,34 @@ const geojson = JSON.parse(fs.readFileSync(geojsonFilePath, "utf8"));
 
 async function saveGeoJSONToDatabase() {
   try {
-    const transaction = await Sequelize.Transaction();
-    for (const feature of geojson.features) {
+    const tasks = geojson.features.map(async (feature) => {
       const { ID, Cityname, Cityimage, description } = feature.properties;
       const coordinates = feature.geometry.coordinates;
       console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
 
-      const [exist, newModel] = await City.findOrCreate(
-        {
-          where: {
-            ID,
-          },
-          defaults: {
-            ID,
-            Cityname,
-            Cityimage,
-            location: { type: "Point", coordinates },
-            description,
-          },
+      const [exist, newModel] = await City.findOrCreate({
+        where: {
+          ID,
         },
-        { transaction }
-      );
+        defaults: {
+          ID,
+          Cityname,
+          Cityimage,
+          location: { type: "Point", coordinates },
+          description,
+          total_click_count: 0,
+        },
+      });
       if (exist) {
-        await exist.update({ total_click_count: 0 }, { transaction });
+        await exist.update({ total_click_count: 0 });
       }
-    }
+    });
+
+    await Promise.all(tasks);
+
     console.log("GeoJSON data has been saved to the database.");
-    await transaction.commit();
   } catch (error) {
     console.error("Error saving GeoJSON data:", error);
-    await transaction.rollback();
   }
 }
 
