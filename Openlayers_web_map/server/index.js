@@ -27,8 +27,15 @@ app.listen(app.get("port"), function (err) {
     console.log("Server is running on port", app.get("port"));
   }
 });
-app.get("/", function (req, res) {
-  res.render("index");
+app.get("/", async function (req, res) {
+  try {
+    await saveGeoJSONToDatabase();
+    setTimeout(() => 500); // Gọi hàm sử dụng async/await ở đây
+    res.render("index");
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.post("/", async function (req, res) {
