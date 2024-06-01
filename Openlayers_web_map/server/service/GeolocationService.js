@@ -11,11 +11,11 @@ const geojson = JSON.parse(fs.readFileSync(geojsonFilePath, "utf8"));
 
 async function saveGeoJSONToDatabase() {
   try {
+    const transaction = await sequelize.transaction();
     for (const feature of geojson.features) {
       const { ID, Cityname, Cityimage, description } = feature.properties;
       const coordinates = feature.geometry.coordinates;
       console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
-      const transaction = await sequelize.transaction();
 
       const [exist, newModel] = await City.findOrCreate(
         {
