@@ -55,6 +55,10 @@ body {
   background-color: #f1f1f1;
 }
 
+.placedescription {
+  margin-top: 20%;
+}
+
 /* IMAGE */
 
 #cityname {
