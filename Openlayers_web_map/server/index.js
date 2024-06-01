@@ -28,7 +28,7 @@ app.listen(app.get("port"), function (err) {
   }
 });
 app.get("/", function (req, res) {
-  // await saveGeoJSONToDatabase();
+  saveGeoJSONToDatabase();
   res.render("index");
 });
 
