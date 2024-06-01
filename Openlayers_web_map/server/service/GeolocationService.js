@@ -26,7 +26,6 @@ async function saveGeoJSONToDatabase() {
           Cityimage,
           location: { type: "Point", coordinates },
           description,
-          total_click_count: 0,
         },
       });
       if (exist) {

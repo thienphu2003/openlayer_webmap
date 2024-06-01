@@ -162,7 +162,7 @@ function init() {
         ID: feature.get("ID"),
       };
       console.log(data);
-      const response = await fetch(SERVER_HOST, {
+      const response = await fetch(SERVER_HOST + "/save", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
