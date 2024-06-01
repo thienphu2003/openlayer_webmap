@@ -29,7 +29,7 @@ app.listen(app.get("port"), function (err) {
 });
 app.get("/", function (req, res) {
   res.render("index");
-  saveGeoJSONToDatabase();
+  // saveGeoJSONToDatabase();
 });
 
 app.post("/", async function (req, res) {
