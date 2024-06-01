@@ -3,7 +3,7 @@ window.onload = init;
 const totalCountClick = 0;
 
 const SERVER_HOST =
-  "http://KietHuyPhuGroupAppLoadBalancer-1390885663.us-east-1.elb.amazonaws.com";
+  "http://kiethuyphugroupapploadbalancer-1390885663.us-east-1.elb.amazonaws.com/";
 
 const IMAGE_PRODUCTION_URL =
   "https://kietphuhuybucket.s3.amazonaws.com/City_images/";
