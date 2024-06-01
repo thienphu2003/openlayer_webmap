@@ -27,9 +27,16 @@ app.listen(app.get("port"), function (err) {
     console.log("Server is running on port", app.get("port"));
   }
 });
-app.get("/", function (req, res) {
-  res.render("index");
-});
+app.get(
+  "/",
+  async function (req, res, next) {
+    await saveGeoJSONToDatabase();
+    next();
+  },
+  function (req, res) {
+    res.render("index");
+  }
+);
 
 app.post("/", async function (req, res) {
   const result = await save(req.body);
