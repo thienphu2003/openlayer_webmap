@@ -2,29 +2,20 @@ const City = require("../model/City");
 
 async function save(params) {
   const { ID } = params;
-  try {
-    if (ID) {
-      const city = await City.findOne({
-        where: {
-          ID,
-        },
-      });
-      if (city) {
-        await city.update({
-          last_time_click: Date.now(),
-          total_click_count: city.total_click_count + 1,
-        });
-      }
-      console.log("Total click count", city.total_click_count);
-      return {
-        total_click: city.total_click_count,
-        last_time_click: city.last_time_click,
-      };
-    }
-    return 0;
-  } catch (err) {
-    throw err;
-  }
+  const city = await City.findOne({
+    where: {
+      ID,
+    },
+  });
+  await city.update({
+    last_time_click: Date.now(),
+    total_click_count: city.total_click_count + 1,
+  });
+  console.log("Total click count", city.total_click_count);
+  return {
+    total_click: city.total_click_count,
+    last_time_click: city.last_time_click,
+  };
 }
 
 async function getData(params) {
