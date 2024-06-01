@@ -1,6 +1,6 @@
 window.onload = init;
 
-let totalCountClick = 0;
+const totalCountClick = 0;
 
 const SERVER_HOST = "http://ec2-3-233-122-181.compute-1.amazonaws.com";
 
@@ -157,7 +157,7 @@ function init() {
       cityNameElement.innerHTML = "Name of the place: " + featureName;
       cityImageElement.setAttribute("src", IMAGE_PRODUCTION_URL + featureImage);
       cityDescription.innerHTML = featureDescription;
-      totalClickCount.innerHTML = totalCountClick;
+      // totalClickCount.innerHTML = totalCountClick;
       const data = {
         ID: feature.get("ID"),
       };
@@ -182,10 +182,9 @@ function init() {
       });
       const formattedDate = formatter.format(date);
       console.log(formattedDate);
-      totalClickCount = totalClickCount + 1;
       totalClickCount.innerHTML =
         "Total Click Count " +
-        totalClickCount +
+        result?.count +
         " and last time click  " +
         formattedDate;
     }
