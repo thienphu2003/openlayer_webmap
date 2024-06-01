@@ -12,20 +12,13 @@ const geojson = JSON.parse(fs.readFileSync(geojsonFilePath, "utf8"));
 async function saveGeoJSONToDatabase() {
   try {
     const tasks = geojson.features.map(async (feature) => {
-      const { ID, Cityname, Cityimage, description } = feature.properties;
-      const coordinates = feature.geometry.coordinates;
-      console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
+      const { ID } = feature.properties;
+      // const coordinates = feature.geometry.coordinates;
+      // console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
 
-      const [exist, newModel] = await City.findOrCreate({
+      const exist = await City.findOne({
         where: {
           ID,
-        },
-        defaults: {
-          ID,
-          Cityname,
-          Cityimage,
-          location: { type: "Point", coordinates },
-          description,
         },
       });
       if (exist) {

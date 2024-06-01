@@ -32,7 +32,7 @@ app.get("/", function (req, res) {
   saveGeoJSONToDatabase();
 });
 
-app.post("/save", async function (req, res) {
+app.post("/", async function (req, res) {
   const result = await save(req.body);
   res.json({ count: result.total_click, time: result.last_time_click });
 });
