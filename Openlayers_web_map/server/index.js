@@ -28,7 +28,14 @@ app.listen(app.get("port"), function (err) {
   }
 });
 
-// Gọi hàm saveGeoJSONToDatabase một lần duy nhất khi khởi động ứng dụng
+(async () => {
+  try {
+    await saveGeoJSONToDatabase();
+    console.log("GeoJSON data has been saved to the database.");
+  } catch (error) {
+    console.error("Error saving GeoJSON data:", error);
+  }
+})();
 
 app.get("/", function (req, res) {
   res.render("index");
@@ -37,8 +44,4 @@ app.get("/", function (req, res) {
 app.post("/", async function (req, res) {
   const result = await save(req.body);
   res.json({ count: result.total_click, time: result.last_time_click });
-});
-
-app.post("/reset_data", async function (req, res) {
-  await saveGeoJSONToDatabase();
 });
