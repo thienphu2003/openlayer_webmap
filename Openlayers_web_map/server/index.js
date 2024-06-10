@@ -2,7 +2,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors"); // Thêm path module
-const saveGeoJSONToDatabase = require("./service/GeolocationService");
+const {
+  saveGeoJSONToDatabase,
+  resetTotalClickCountToZero,
+} = require("./service/GeolocationService");
 const { save, getData } = require("./service/CityService");
 
 const app = express();
@@ -37,8 +40,18 @@ app.listen(app.get("port"), function (err) {
   }
 })();
 
-app.get("/", function (req, res) {
-  res.render("index");
+app.get("/", async function (req, res) {
+  try {
+    // Đảm bảo rằng total_click_count trong cơ sở dữ liệu được cập nhật về 0
+    await resetTotalClickCountToZero();
+
+    // Render trang index
+    res.render("index");
+  } catch (error) {
+    console.error("Error resetting total_click_count:", error);
+    // Trả về một trang lỗi nếu có lỗi xảy ra
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.post("/", async function (req, res) {

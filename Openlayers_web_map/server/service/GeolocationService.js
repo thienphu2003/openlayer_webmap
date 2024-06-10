@@ -39,4 +39,21 @@ async function saveGeoJSONToDatabase() {
   }
 }
 
-module.exports = saveGeoJSONToDatabase;
+async function resetTotalClickCountToZero() {
+  try {
+    // Lấy tất cả các bản ghi trong City
+    const cities = await City.findAll();
+
+    // Cập nhật total_click_count của mỗi bản ghi về 0
+    await Promise.all(
+      cities.map((city) => city.update({ total_click_count: 0 }))
+    );
+  } catch (error) {
+    throw error;
+  }
+}
+
+module.exports = {
+  saveGeoJSONToDatabase,
+  resetTotalClickCountToZero,
+};
