@@ -42,10 +42,6 @@ app.listen(app.get("port"), function (err) {
 
 app.get("/", async function (req, res) {
   try {
-    // Đảm bảo rằng total_click_count trong cơ sở dữ liệu được cập nhật về 0
-    await resetTotalClickCountToZero();
-
-    // Render trang index
     res.render("index");
   } catch (error) {
     console.error("Error resetting total_click_count:", error);
@@ -57,4 +53,8 @@ app.get("/", async function (req, res) {
 app.post("/", async function (req, res) {
   const result = await save(req.body);
   res.json({ count: result.total_click, time: result.last_time_click });
+});
+
+app.post("/reset_data", async function (req, res) {
+  const result = await resetTotalClickCountToZero();
 });
