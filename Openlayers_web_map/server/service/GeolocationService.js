@@ -11,10 +11,10 @@ const geojson = JSON.parse(fs.readFileSync(geojsonFilePath, "utf8"));
 
 async function saveGeoJSONToDatabase() {
   try {
-    // Xóa tất cả các bản ghi trong City trước khi thêm dữ liệu mới
+    // Xóa tất cả các bản ghi trong City mà không quan tâm đến paranoid
     await City.destroy({
       where: {},
-      truncate: true,
+      force: true, // Sử dụng force: true để bỏ qua paranoid
     });
 
     for (const feature of geojson.features) {
@@ -23,7 +23,7 @@ async function saveGeoJSONToDatabase() {
       console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
 
       // Thêm mới một bản ghi trong City với các thuộc tính từ GeoJSON
-      const template = await City.build({
+      await City.create({
         ID,
         Cityname,
         Cityimage,
@@ -31,8 +31,6 @@ async function saveGeoJSONToDatabase() {
         description,
         total_click_count: 0,
       });
-
-      await template.save();
     }
 
     console.log("GeoJSON data has been saved to the database.");
