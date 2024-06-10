@@ -11,14 +11,19 @@ const geojson = JSON.parse(fs.readFileSync(geojsonFilePath, "utf8"));
 
 async function saveGeoJSONToDatabase() {
   try {
+    // Xóa tất cả các bản ghi trong City trước khi thêm dữ liệu mới
+    await City.destroy({
+      where: {},
+      truncate: true,
+    });
+
     for (const feature of geojson.features) {
       const { ID, Cityname, Cityimage, description } = feature.properties;
       const coordinates = feature.geometry.coordinates;
       console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
 
-      await City.destroyAll();
-
-      const newRecords = await City.create({
+      // Thêm mới một bản ghi trong City với các thuộc tính từ GeoJSON
+      await City.create({
         ID,
         Cityname,
         Cityimage,
