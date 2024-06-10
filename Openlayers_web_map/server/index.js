@@ -27,9 +27,18 @@ app.listen(app.get("port"), function (err) {
     console.log("Server is running on port", app.get("port"));
   }
 });
+
+// Gọi hàm saveGeoJSONToDatabase một lần duy nhất khi khởi động ứng dụng
+(async () => {
+  try {
+    await saveGeoJSONToDatabase();
+    console.log("GeoJSON data has been saved to the database.");
+  } catch (error) {
+    console.error("Error saving GeoJSON data:", error);
+  }
+})();
 app.get("/", async function (req, res) {
   res.render("index");
-  await saveGeoJSONToDatabase();
 });
 
 app.post("/", async function (req, res) {
