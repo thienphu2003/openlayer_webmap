@@ -118,6 +118,12 @@ function init() {
   });
 
   async function mainLogic(feature, clickedAnchorElement) {
+    await fetch(SERVER_HOST + "/reset_data", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     // Re-assign active class to the clicked element
     let currentActiveStyledElement = document.querySelector(".active");
     currentActiveStyledElement.className =
