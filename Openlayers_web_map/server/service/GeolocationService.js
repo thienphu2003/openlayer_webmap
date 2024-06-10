@@ -25,11 +25,14 @@ async function saveGeoJSONToDatabase() {
           Cityimage,
           location: { type: "Point", coordinates },
           description,
+          // Không cập nhật total_click_count nếu dữ liệu đã tồn tại
+          total_click_count: 0, // Giá trị mặc định là 0
         },
       });
-      if (exist) {
-        await exist.update({ total_click_count: 0 });
-      }
+      // Không cập nhật total_click_count nếu dữ liệu đã tồn tại
+      // if (exist) {
+      //   await exist.update({ total_click_count: 0 });
+      // }
     }
     console.log("GeoJSON data has been saved to the database.");
   } catch (error) {
