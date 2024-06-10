@@ -16,7 +16,7 @@ async function saveGeoJSONToDatabase() {
       const coordinates = feature.geometry.coordinates;
       console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
 
-      await City.truncate();
+      await City.destroyAll();
 
       const newRecords = await City.create({
         ID,
