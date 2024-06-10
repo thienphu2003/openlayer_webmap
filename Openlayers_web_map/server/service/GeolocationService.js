@@ -23,7 +23,7 @@ async function saveGeoJSONToDatabase() {
       console.log("🚀 ~ saveGeoJSONToDatabase ~ coordinates:", coordinates);
 
       // Thêm mới một bản ghi trong City với các thuộc tính từ GeoJSON
-      await City.create({
+      const template = await City.build({
         ID,
         Cityname,
         Cityimage,
@@ -31,6 +31,8 @@ async function saveGeoJSONToDatabase() {
         description,
         total_click_count: 0,
       });
+
+      await template.save();
     }
 
     console.log("GeoJSON data has been saved to the database.");
