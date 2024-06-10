@@ -1,9 +1,10 @@
 window.onload = init;
-
 const totalCountClick = 0;
 
-const SERVER_HOST = "http://ec2-3-81-154-20.compute-1.amazonaws.com";
-// const SERVER_HOST = "http://localhost:3002";
+import * as axios from "axios";
+
+// const SERVER_HOST = "http://ec2-3-81-154-20.compute-1.amazonaws.com";
+const SERVER_HOST = "http://localhost:3002";
 
 const IMAGE_PRODUCTION_URL =
   "https://kietphuhuybucket.s3.amazonaws.com/City_images/";
@@ -158,38 +159,38 @@ function init() {
       cityNameElement.innerHTML = "Name of the place: " + featureName;
       cityImageElement.setAttribute("src", IMAGE_PRODUCTION_URL + featureImage);
       cityDescription.innerHTML = featureDescription;
-      totalClickCount.innerHTML = totalCountClick;
-      const data = {
-        ID: feature.get("ID"),
-      };
-      console.log(data);
-      const response = await fetch(SERVER_HOST, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      // totalClickCount.innerHTML = totalCountClick;
+      // const data = {
+      //   ID: feature.get("ID"),
+      // };
+      // console.log(data);
+      // const response = await fetch(SERVER_HOST, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(data),
+      // });
 
-      const result = await response.json();
-      const date = new Date(result.time);
-      const formatter = new Intl.DateTimeFormat("en-US", {
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        timeZone: "Asia/Ho_Chi_Minh",
-      });
-      const formattedDate = formatter.format(date);
-      console.log(formattedDate);
+      // const result = await response.json();
+      // const date = new Date(result.time);
+      // const formatter = new Intl.DateTimeFormat("en-US", {
+      //   year: "numeric",
+      //   month: "2-digit",
+      //   day: "2-digit",
+      //   hour: "2-digit",
+      //   minute: "2-digit",
+      //   second: "2-digit",
+      //   timeZone: "Asia/Ho_Chi_Minh",
+      // });
+      // const formattedDate = formatter.format(date);
+      // console.log(formattedDate);
 
-      totalClickCount.innerHTML =
-        "Total Click Count " +
-        result?.count +
-        " and last time click  " +
-        formattedDate;
+      // totalClickCount.innerHTML =
+      //   "Total Click Count " +
+      //   result?.count +
+      //   " and last time click  " +
+      //   formattedDate;
     }
   }
 
