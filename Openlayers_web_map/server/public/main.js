@@ -153,6 +153,7 @@ function init() {
       );
       cityDescription.innerHTML = "";
       totalClickCount.innerHTML = "";
+      placeCoordinate.innerHTML = "";
     }
     // Change view, and content in the menu based on the feature
     else {
